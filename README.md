@@ -7,15 +7,16 @@ This includes:
 - ROS, the robotic operating system
 - The Racecar simulator
 
-You can install this software via a prebuilt virtual machine, or manually.
+You can install this software via a prebuilt virtual machine (fast and easy), or manually (more control and more work).
 
 ## Prebuilt Installation
 
 Download and install VMware, which you can get for free [through IS&T](https://ist.mit.edu/vmware-fusion).
 
-Download the latest VM via bittorrent. If you don't already have a bittorrent client we recommend Transmission on Linux and OS X and qBittorent on Windows.
+Download the latest racecar virtual machine via a BitTorrent in the [releases page](https://github.com/mit-rss/base_installation/releases) of this repo.
+If you don't already have a BitTorrent client we recommend Transmission on Linux and OS X and qBittorent on Windows.
 
-Open up the virtual machine. Everything is already installed! Skip ahead to the 
+Open up the virtual machine in VMware. Everything is already installed! Skip ahead to the 
 [Testing the Racecar Simulator](#testing-the-racecar-simulator) section.
 
 ## Manual Installation
@@ -28,24 +29,24 @@ Plus, virtual machines can be paused in a particular state and backed up easily.
 
 While it is entirely possible to install ROS and the other software directly on your own native operating system, this is done **at your own risk**.
 If you know what you're doing, everything will probably work fine if you are running Debian or Ubuntu.
-Other distributions (Arch Linux, Gentoo, OS X) are not as well supported by ROS and you may find yourself having manually building packages or writing patches.
+Other distributions (Arch Linux, Gentoo, OS X) are not as well supported by ROS and you may find yourself having to manually build packages or even write fixes for the code.
 ROS does not work on Windows.
 
 #### Installing a Debian Virtual Machine
 
 Download and install VMware, which you can get for free [through IS&T](https://ist.mit.edu/vmware-fusion).
 
-Download the [Debian](https://www.debian.org/distrib/netinst) operating system. Choose the "small", "amd64" installer.
+Download the [Debian](https://www.debian.org/distrib/netinst) operating system. Choose the small, amd64 installer.
 
 Open VMWare and select "New Virtual Machine...". Select a "Typical" installation. When promted, select the ```.iso``` Debian image you downloaded. It should automatically detect the correct disto. Click through the rest of the settings until the OS begins to boot
 
-- Choose "Graphical Installer" and begin selecting the default options. When promted, set your hostname to "racecar-vm", leave the domain name blank and set the username to "racecar".
+Choose the "Graphical Installer" option and begin selecting the default options. When promted, set your hostname to ```racecar-vm```, leave the domain name blank. Set the username to ```racecar```.
 
-- Continue selecting default settings. When asked about setting up GRUB select "yes" then select "/dev/sda".
+Continue selecting default settings. When asked about setting up GRUB select "yes" then select ```/dev/sda```.
 
 You should now have Debian installed! Log in and click the "Activities" button in the top left and open the "Terminal" application.
 
-Type ```su``` and enter your password. As root type:
+Type ```su``` and enter your password. Now run the following to install some essential software:
 
     apt-get update
     apt-get upgrade
@@ -57,7 +58,11 @@ After the installation completes run ```visudo``` and add the following line to 
 
 Write out the file and type ```exit``` in the terminal, then shut the virtual machine down. At this point, you can optionally designate more processors or memory to the VM to allow it to run faster by changing the settings in ```VM > Settings```.
 
-*A useful tip*: Use <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>V</kbd> to paste into the VM.
+##### Some useful VM tips
+
+- Use <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>V</kbd> to paste into the VM.
+- Use <kbd>CTRL</kbd>+<kbd>ALT</kbd> to release your keyboard from the VM.
+- Select ```View > Autosize > Autofit Guest``` to have the VM automatically resize to the window size.
 
 ### Installing ROS
 
@@ -96,7 +101,7 @@ Then run ```catkin_make``` in the root of your catkin workspace to build it.
     catkin_make
     source devel/setup.bash
 
-### Testing the Racecar Simulator
+## Testing the Racecar Simulator
 
 Start a ```roscore``` which acts as the communication center for all ROS services. Just run this in a terminal:
 
