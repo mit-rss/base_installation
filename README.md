@@ -17,6 +17,8 @@ Download the latest racecar virtual machine via a BitTorrent in the [releases pa
 If you don't already have a BitTorrent client we recommend Transmission on Linux and OS X and qBittorent on Windows.
 Please seed to your peers :)
 
+Alternatively, if you're having a lot of trouble torrenting you can download it from the mirror [here](tfh.mit.edu/racecar.ova), but it might be pretty slow, especially if everybody is using it.
+
 Import ```.ova``` file into VMware and then boot the machine. Log in to the ```racecar``` account with password ```racecar@mit```. Everything is already installed! Skip ahead to the 
 [Testing the Racecar Simulator](#testing-the-racecar-simulator) section.
 
