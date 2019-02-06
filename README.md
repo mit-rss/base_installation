@@ -15,6 +15,7 @@ Download and install VMware, which you can get for free [through IS&T](https://i
 
 Download the latest racecar virtual machine via a BitTorrent in the [releases page](https://github.com/mit-rss/base_installation/releases) of this repo.
 If you don't already have a BitTorrent client we recommend Transmission on Linux and OS X and qBittorent on Windows.
+Please seed to your peers :)
 
 Open up the virtual machine in VMware. Everything is already installed! Skip ahead to the 
 [Testing the Racecar Simulator](#testing-the-racecar-simulator) section.
@@ -30,7 +31,6 @@ Plus, virtual machines can be paused in a particular state and backed up easily.
 While it is entirely possible to install ROS and the other software directly on your own native operating system, this is done **at your own risk**.
 If you know what you're doing, everything will probably work fine if you are running Debian or Ubuntu.
 Other distributions (Arch Linux, Gentoo, OS X) are not as well supported by ROS and you may find yourself having to manually build packages or even write fixes for the code.
-ROS does not work on Windows.
 
 #### Installing a Debian Virtual Machine
 
@@ -38,15 +38,11 @@ Download and install VMware, which you can get for free [through IS&T](https://i
 
 Download the [Debian](https://www.debian.org/distrib/netinst) operating system. Choose the small, amd64 installer.
 
-Open VMWare and select "New Virtual Machine...". Select a "Typical" installation. When promted, select the ```.iso``` Debian image you downloaded. It should automatically detect the correct disto. Click through the rest of the settings until the OS begins to boot
+Open VMWare and select ```File > New Virtual Machine...```. Select a "Typical" installation. When promted, select the ```.iso``` Debian image you downloaded. It will automatically select the correct distribution. Give the VM a nice name and use the default disk settings. In the final page, we reccomend you click the "Customize Hardware" button and increase the memory to at least 2GB - make sure your computer has enough memory to do this. Hit finish and the OS should boot.
 
-Choose the "Graphical Installer" option and begin selecting the default options. When promted, set your hostname to ```racecar-vm```, leave the domain name blank. Set the username to ```racecar```.
+In the boot menu choose the "Graphical Installer" option and begin selecting the default options. When promted, set your hostname to ```racecar-vm```, leave the domain name blank. Set the username to ```racecar``` and choose a memorable password for the root and user. Continue selecting default settings. When asked about writing to disks select "yes". When asked about setting up GRUB select "yes" then select ```/dev/sda```.
 
-Continue selecting default settings. When asked about setting up GRUB select "yes" then select ```/dev/sda```.
-
-You should now have Debian installed! Log in and click the "Activities" button in the top left and open the "Terminal" application.
-
-Type ```su``` and enter your password. Now run the following to install some essential software:
+You should now have Debian installed! Log in and click the "Activities" button in the top left and open the "Terminal" application. Type ```su``` and enter your password. Now run the following to install some essential software:
 
     apt-get update
     apt-get upgrade
@@ -56,7 +52,7 @@ After the installation completes run ```visudo``` and add the following line to 
 
     racecar ALL=(ALL:ALL) ALL
 
-Write out the file and type ```exit``` in the terminal, then shut the virtual machine down. At this point, you can optionally designate more processors or memory to the VM to allow it to run faster by changing the settings in ```VM > Settings```.
+Write out the file and type ```exit``` in the terminal, then shut the virtual machine down.
 
 ##### Some useful VM tips
 
@@ -66,8 +62,9 @@ Write out the file and type ```exit``` in the terminal, then shut the virtual ma
 
 ### Installing ROS
 
-Boot up the virtual machine and log in. Follow the [instructions on the ROS wiki](http://wiki.ros.org/melodic/Installation/Debian)
-to install ```ros-melodic-desktop```. You can stop at the step about setting up your enviroment.
+Boot up the virtual machine and log in. Follow the [instructions on the ROS wiki](http://wiki.ros.org/melodic/Installation/Debian) to add the ROS sources and keys, then run:
+
+    sudo apt-get install ros-melodic-desktop
 
 ### Creating a Catkin workspace
 
@@ -123,6 +120,6 @@ You should see the car sitting in the middle of a 2D map of MIT's building 31 as
 
 ![The racecar in the starting position](https://raw.githubusercontent.com/mit-racecar/racecar_simulator/master/media/racecar_simulator_rviz_1.png)
 
-You can use a USB joystick to drive the car around, or you can place the car manually by clicking the "2D Pose Estimate button" on the top of the screen and dragging your mouse on the desired pose.
+You can move the car around by clicking the "2D Pose Estimate button" on the top of the screen and dragging your mouse on the desired pose. You can also drive the car with a USB joystick. To connect the joystick to the VM go to ```VM > Removable Devices```, find your device and click connect.
 
 ![The racecar in a cubicle](https://raw.githubusercontent.com/mit-racecar/racecar_simulator/master/media/racecar_simulator_rviz_2.png)
