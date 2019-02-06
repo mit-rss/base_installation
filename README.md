@@ -17,7 +17,7 @@ Download the latest racecar virtual machine via a BitTorrent in the [releases pa
 If you don't already have a BitTorrent client we recommend Transmission on Linux and OS X and qBittorent on Windows.
 Please seed to your peers :)
 
-Open up the virtual machine in VMware. Everything is already installed! Skip ahead to the 
+Import ```.ova``` file into VMware and then boot the machine. Log in to the ```racecar``` account with password ```racecar@mit```. Everything is already installed! Skip ahead to the 
 [Testing the Racecar Simulator](#testing-the-racecar-simulator) section.
 
 ## Manual Installation
@@ -118,7 +118,7 @@ In the left panel under the newly added LaserScan section, change the size to 0.
 
 You should see the car sitting in the middle of a 2D map of MIT's building 31 as shown below:
 
-![The racecar in the starting position](https://raw.githubusercontent.com/mit-racecar/racecar_simulator/master/media/racecar_simulator_rviz_1.png)
+![The racecar in a cubicle](https://raw.githubusercontent.com/mit-rss/base_installation/master/media/racecar_simulator_rviz.png)
 
 You can move the car around by clicking the "2D Pose Estimate button" on the top of the screen and dragging your mouse on the desired pose. You can also drive the car with a USB joystick. To connect the joystick to the VM go to ```VM > Removable Devices```, find your device and click connect.
 
