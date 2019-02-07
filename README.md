@@ -91,12 +91,12 @@ First install some additional ros packages by running:
 
 Then navigate to your catkin workspace source folder and use git to clone the simulator:
 
-    cd ~/catkin_ws/src
+    cd ~/racecar_ws/src
     git clone https://github.com/mit-racecar/racecar_simulator.git
 
 Then run ```catkin_make``` in the root of your catkin workspace to build it.
 
-    cd ~/catkin_ws
+    cd ~/racecar_ws
     catkin_make
     source devel/setup.bash
 
