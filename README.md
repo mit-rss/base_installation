@@ -36,9 +36,9 @@ Other distributions (Arch Linux, Gentoo, OS X) are not as well supported by ROS 
 
 #### Installing a Debian Virtual Machine
 
-Download and install VMware, which you can get for free [through IS&T](https://ist.mit.edu/vmware-fusion).
+If you are already running either Debian 9 or Ubuntu 18.04 you can skip ahead to the [Testing the Racecar Simulator](#testing-the-racecar-simulator) section. Otherwise, download and install VMware, which you can get for free [through IS&T](https://ist.mit.edu/vmware-fusion).
 
-Download the [Debian](https://www.debian.org/distrib/netinst) operating system. Choose the small, amd64 installer.
+Download the [Debian 9](https://www.debian.org/releases/stretch/debian-installer/) operating system. Choose the small, amd64 installer.
 
 Open VMWare and select ```File > New Virtual Machine...```. Select a "Typical" installation. When promted, select the ```.iso``` Debian image you downloaded. It will automatically select the correct distribution. Give the VM a nice name and use the default disk settings. In the final page, we reccomend you click the "Customize Hardware" button and increase the memory to at least 2GB - make sure your computer has enough memory to do this. Hit finish and the OS should boot.
 
