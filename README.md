@@ -36,7 +36,9 @@ Other distributions (Arch Linux, Gentoo, OS X) are not as well supported by ROS 
 
 #### Installing a Debian Virtual Machine
 
-If you are already running either Debian 9 or Ubuntu 18.04 you can skip ahead to the [Testing the Racecar Simulator](#testing-the-racecar-simulator) section. Otherwise, download and install VMware, which you can get for free [through IS&T](https://ist.mit.edu/vmware-fusion).
+If you are already running either Debian 9 or Ubuntu 18.04 you can skip ahead to the [Installing ROS](#installing-ros) section. 
+
+Download and install VMware, which you can get for free [through IS&T](https://ist.mit.edu/vmware-fusion).
 
 Download the [Debian 9](https://www.debian.org/releases/stretch/debian-installer/) operating system. Choose the small, amd64 installer.
 
