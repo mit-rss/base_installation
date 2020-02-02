@@ -4,7 +4,7 @@ These instructions will guide you through the installation of the necessary soft
 This includes:
 
 - VMware, a virtualization software to install an operating system without disrupting your current system
-- Debian 9, a unix-like operating system
+- Debian Linux, a unix-like operating system
 - ROS, a very popular robotics toolkit
 - The Racecar simulator
 
