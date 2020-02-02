@@ -3,24 +3,29 @@
 These instructions will guide you through the installation of the necessary software for this course.
 This includes:
 
-- A unix-like operating system
-- ROS, the robotic operating system
+- VMware, a virtualization software to install an operating system without disrupting your current system
+- Debian 9, a unix-like operating system
+- ROS, a very popular robotics toolkit
 - The Racecar simulator
 
 You can install this software via a prebuilt virtual machine (fast and easy), or manually (more control and more work).
 
 ## Prebuilt Installation
 
-Download and install VMware, which you can get for free [through IS&T](https://ist.mit.edu/vmware-fusion).
+The TAs will come around with flash drives containing VMware installers for Windows and MacOS as well as the latest racecar virtual machine image.
 
-The TAs will come around with flash drives containing the latest racecar virtual machine.
+Alternatively, you can obtain VMware for free [through IS&T](https://ist.mit.edu/vmware-fusion). If you already have VirtualBox installed, feel free to use it instead of VMware.
 
-Alternatively, you can download it from the mirror [here](http://tfh.mit.edu/racecar.ova), but it might be pretty slow, especially if everybody is using it.
-
-Import ```.ova``` file into VMware and then boot the machine. Log in to the ```racecar``` account with password ```racecar@mit```. Everything is already installed! Skip ahead to the 
+Import ```.ova``` file into VMware (or VirtualBox) and then boot the machine. Log in to the ```racecar``` account with password ```racecar@mit```. Everything is already installed! Skip ahead to the 
 [Testing the Racecar Simulator](#testing-the-racecar-simulator) section.
 
-## Manual Installation
+### VMware troubleshooting
+
+For virtualization software to work, you will need to have hardware virtualization support (Intel VT-x or AMD-V) enabled in your BIOS.
+
+On MacOS Catalina, you might encounter mouse issues. This seems to be related to the MacOS Accessibility settings, and you might find this [link](https://communities.vmware.com/thread/621508) helpful. 
+
+## Manual Installation (skip if you use the prebuilt image)
 
 ### Operating System
 
@@ -30,7 +35,7 @@ Plus, virtual machines can be paused in a particular state and backed up easily.
 
 While it is entirely possible to install ROS and the other software directly on your own native operating system, this is done **at your own risk**.
 If you know what you're doing, everything will probably work fine if you are running Debian or Ubuntu.
-Other distributions (Arch Linux, Gentoo, OS X) are not as well supported by ROS and you may find yourself having to manually build packages or even write fixes for the code.
+Other distributions (Arch Linux, Gentoo, OS X, [NixOS](https://github.com/lukaslaobeyer/nix-ros-overlay)) are not as well supported by ROS and you may find yourself having to manually build packages or even write fixes for the code.
 
 #### Installing a Debian Virtual Machine
 
@@ -38,7 +43,7 @@ If you are already running either Debian 9 or Ubuntu 18.04 you can skip ahead to
 
 Download and install VMware, which you can get for free [through IS&T](https://ist.mit.edu/vmware-fusion).
 
-Download the [Debian 9](https://www.debian.org/releases/stretch/debian-installer/) operating system. Choose the small, amd64 installer.
+Download the [Debian 9](https://www.debian.org/releases/stretch/debian-installer/) operating system. Choose the small, amd64 installer. (It is important to choose Debian 9, instead of 10, since ROS is not supported on Debian 10).
 
 Open VMWare and select ```File > New Virtual Machine...```. Select a "Typical" installation. When promted, select the ```.iso``` Debian image you downloaded. It will automatically select the correct distribution. Give the VM a nice name and use the default disk settings. In the final page, we reccomend you click the "Customize Hardware" button and increase the memory to at least 2GB - make sure your computer has enough memory to do this. Hit finish and the OS should boot.
 
