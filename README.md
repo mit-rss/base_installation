@@ -122,6 +122,6 @@ You should see the car sitting in the middle of a 2D map of MIT's building 31 as
 
 ![The racecar in a cubicle](https://raw.githubusercontent.com/mit-rss/base_installation/master/media/racecar_simulator_rviz.png)
 
-You can move the car around by clicking the "2D Pose Estimate button" on the top of the screen and dragging your mouse on the desired pose. You can also drive the car with a USB joystick. To connect the joystick to the VM go to ```VM > Removable Devices```, find your device and click connect.
+You can move the car around by clicking the "2D Pose Estimate button" on the top of the screen and dragging your mouse on the desired pose.
 
 ![The racecar in a cubicle](https://raw.githubusercontent.com/mit-racecar/racecar_simulator/master/media/racecar_simulator_rviz_2.png)
