@@ -51,9 +51,9 @@ In the boot menu choose the "Graphical Installer" option and begin selecting the
 
 You should now have Debian installed! Log in and click the "Activities" button in the top left and open the "Terminal" application. Type ```su``` and enter your password. Now run the following to install some essential software:
 
-    apt-get update
-    apt-get upgrade
-    apt-get install sudo open-vm-tools open-vm-tools-desktop vim git dirmngr make g++
+    sudo apt-get update
+    sudo apt-get upgrade
+    sudo apt-get install sudo open-vm-tools open-vm-tools-desktop vim git dirmngr make g++
 
 After the installation completes run ```visudo``` and add the following line to the file that opens up:
 
