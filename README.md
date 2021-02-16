@@ -12,9 +12,9 @@ You can install this software via a prebuilt virtual machine (fast and easy), or
 
 ## Prebuilt Installation
 
-The TAs will come around with flash drives containing VMware installers for Windows and MacOS as well as the latest racecar virtual machine image.
+The TAs will distribute a link to the latest racecar virtual machine image.
 
-Alternatively, you can obtain VMware for free [through IS&T](https://ist.mit.edu/vmware-fusion). If you already have VirtualBox installed, feel free to use it instead of VMware.
+You can obtain VMware for free [through IS&T](https://ist.mit.edu/vmware-fusion). If you already have VirtualBox installed, feel free to use it instead of VMware.
 
 Import ```.ova``` file into VMware (or VirtualBox) and then boot the machine. Log in to the ```racecar``` account with password ```racecar@mit```. Everything is already installed! Skip ahead to the 
 [Testing the Racecar Simulator](#testing-the-racecar-simulator) section.
