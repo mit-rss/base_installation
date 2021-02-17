@@ -19,6 +19,8 @@ You can obtain VMware for free [through IS&T](https://ist.mit.edu/vmware-fusion)
 Import the ```.ova``` file from Dropbox into VMware (or VirtualBox) and then boot the machine. Log in to the ```racecar``` account with password ```racecar@mit```. Everything is already installed! Skip ahead to the 
 [Testing the Racecar Simulator](#testing-the-racecar-simulator) section.
 
+If you are on Windows and have issues importing the ```.ova``` and you've used Windows Subsystem for Linux in the past, you may get an error saying that your host machine is not compatible. Follow the Resolution instructions [here](https://kb.vmware.com/s/article/2146361) to Turn Off Hyper-V (steps 1 and 2).
+
 ### VMware troubleshooting
 
 For virtualization software to work, you will need to have hardware virtualization support (Intel VT-x or AMD-V) enabled in your BIOS.
