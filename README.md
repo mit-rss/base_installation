@@ -12,11 +12,11 @@ You can install this software via a prebuilt virtual machine (fast and easy), or
 
 ## Prebuilt Installation
 
-The TAs will distribute a link to the latest racecar virtual machine image.
+The latest racecar virtual machine image is [here on Dropbox](https://www.dropbox.com/s/lq2dlotxoqtkbx5/racecar.ova?dl=0). If you have issues downloading with Chrome, try a different browser such as Firefox.
 
 You can obtain VMware for free [through IS&T](https://ist.mit.edu/vmware-fusion). If you already have VirtualBox installed, feel free to use it instead of VMware.
 
-Import ```.ova``` file into VMware (or VirtualBox) and then boot the machine. Log in to the ```racecar``` account with password ```racecar@mit```. Everything is already installed! Skip ahead to the 
+Import the ```.ova``` file from Dropbox into VMware (or VirtualBox) and then boot the machine. Log in to the ```racecar``` account with password ```racecar@mit```. Everything is already installed! Skip ahead to the 
 [Testing the Racecar Simulator](#testing-the-racecar-simulator) section.
 
 ### VMware troubleshooting
@@ -24,6 +24,8 @@ Import ```.ova``` file into VMware (or VirtualBox) and then boot the machine. Lo
 For virtualization software to work, you will need to have hardware virtualization support (Intel VT-x or AMD-V) enabled in your BIOS.
 
 On MacOS Catalina, you might encounter mouse issues. This seems to be related to the MacOS Accessibility settings, and you might find this [link](https://communities.vmware.com/thread/621508) helpful. 
+
+On a manual installation, you may not be able to copy and paste from your host to the VM and the VM may have low resolution until you restart the VM.
 
 ## Manual Installation (skip if you use the prebuilt image)
 
@@ -43,17 +45,17 @@ If you are already running either Debian 9 or Ubuntu 18.04 you can skip ahead to
 
 Download and install VMware, which you can get for free [through IS&T](https://ist.mit.edu/vmware-fusion).
 
-Download the [Debian 9](https://www.debian.org/releases/stretch/debian-installer/) operating system. Choose the small, amd64 installer. (It is important to choose Debian 9, instead of 10, since ROS is not supported on Debian 10).
+Download the [Debian 9](https://www.debian.org/releases/stretch/debian-installer/) operating system. Choose the netinst CD image, amd64 installer. (It is important to choose Debian 9, instead of 10, since ROS is not supported on Debian 10).
 
-Open VMWare and select ```File > New Virtual Machine...```. Select a "Typical" installation. When promted, select the ```.iso``` Debian image you downloaded. It will automatically select the correct distribution. Give the VM a nice name and use the default disk settings. In the final page, we reccomend you click the "Customize Hardware" button and increase the memory to at least 2GB - make sure your computer has enough memory to do this. Hit finish and the OS should boot.
+Open VMWare and select ```File > New... ```. Select ```Install from disc or image```. When prompted, select the ```.iso``` Debian image you downloaded. It will automatically select the correct distribution. Give the VM a nice name (you may have to do this on the final page under "Customize Settings") and use the default disk settings. In the final page, we recommend you click the "Customize Hardware" button and increase the memory to at least 2GB - make sure your computer has enough memory to do this. Hit finish and the OS should boot.
 
-In the boot menu choose the "Graphical Installer" option and begin selecting the default options. When promted, set your hostname to ```racecar-vm```, leave the domain name blank. Set the username to ```racecar``` and choose a memorable password for the root and user. Continue selecting default settings. When asked about writing to disks select "yes". When asked about setting up GRUB select "yes" then select ```/dev/sda```.
+In the boot menu choose the "Graphical Installer" option and begin selecting the default options. When prompted, set your hostname to ```racecar-vm```, leave the domain name blank. Set the username to ```racecar``` and choose a memorable password for the root and user. Continue selecting default settings. When asked about writing to disks select "yes". When asked about setting up GRUB select "yes" then select ```/dev/sda```.
 
 You should now have Debian installed! Log in and click the "Activities" button in the top left and open the "Terminal" application. Type ```su``` and enter your password. Now run the following to install some essential software:
 
-    sudo apt-get update
-    sudo apt-get upgrade
-    sudo apt-get install sudo open-vm-tools open-vm-tools-desktop vim git dirmngr make g++
+    apt-get update
+    apt-get upgrade
+    apt-get install sudo open-vm-tools open-vm-tools-desktop vim git dirmngr make g++
 
 After the installation completes run ```visudo``` and add the following line to the file that opens up:
 
@@ -69,7 +71,7 @@ Write out the file and type ```exit``` in the terminal, then shut the virtual ma
 
 ### Installing ROS
 
-Boot up the virtual machine and log in. Follow the [instructions on the ROS wiki](http://wiki.ros.org/melodic/Installation/Debian) to add the ROS sources and keys, then run:
+Boot up the virtual machine and log in. Follow the [instructions on the ROS wiki](http://wiki.ros.org/melodic/Installation/Debian) (steps 1.2 and 1.3) to add the ROS sources and keys, then run:
 
     sudo apt-get install ros-melodic-desktop
 
