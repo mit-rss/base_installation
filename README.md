@@ -75,6 +75,16 @@ Boot up the virtual machine and log in. Follow the [instructions on the ROS wiki
 
     sudo apt-get install ros-melodic-desktop
 
+### Additional Installs
+
+These installs will prepare your VM for working with a more advanced simulator that we'll cover in-depth in a later lab. Run these commands:
+
+    sudo apt-get install python-pip
+    pip install scikit-build empy PyYAML scipy
+    sudo apt-get install python-wstool
+    sudo apt-get install libqwt-dev
+    sudo apt-get install ros-melodic-rqt-multiplot
+
 ### Creating a Catkin workspace
 
 A catkin workspace is where all of your ROS code will live. The workspace will automatically keep track of the packages scripts you write so you can reference them in other pieces of code. Create it by running:
