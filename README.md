@@ -12,7 +12,7 @@ You can install this software via a prebuilt virtual machine (fast and easy), or
 
 ## Prebuilt Installation
 
-The latest racecar virtual machine image is [here on Dropbox](https://www.dropbox.com/s/lq2dlotxoqtkbx5/racecar.ova?dl=0). If you have issues downloading with Chrome, try a different browser such as Firefox.
+The latest racecar virtual machine image is [here on Dropbox](https://www.dropbox.com/s/kxx19i90r1svsve/racecar.ova?dl=0). If you have issues downloading with Chrome, try a different browser such as Firefox.
 
 You can obtain VMware for free [through IS&T](https://ist.mit.edu/vmware-fusion). If you already have VirtualBox installed, feel free to use it instead of VMware.
 
