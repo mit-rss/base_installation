@@ -133,6 +133,7 @@ In another terminal start the simulator itself by running
 
     roslaunch racecar_simulator simulate.launch
 
+Note: you should see an `Error: Couldn't open joystick /dev/input/js0`. You can safely ignore this for now (it is a relic of connecting to the physical system).
 Now in the ```rviz``` window that opened, in the left panel at the bottom click the "Add" button, then in the "By topic" tab add the ```/map``` topic and the ```/scan``` topic.
 Then in the "By display type" tab add the RobotModel type.
 In the left panel under the newly added LaserScan section, change the size to 0.1 meters for a clearer visualization of the lidar (shown in rainbow).
