@@ -3,14 +3,38 @@
 These instructions will guide you through the installation of the necessary software for this course.
 This includes:
 
-- VMware, a virtualization software to install an operating system without disrupting your current system
+- Docker, a powerful tool for isolating development environments from the host environment
 - Debian Linux, a unix-like operating system
 - ROS, a very popular robotics toolkit
 - The Racecar simulator
 
-You can install this software via a prebuilt virtual machine (fast and easy), or manually (more control and more work).
+We recommend following the instructions for installing this software using the Docker image as detailed below (fast and reliable), though you may also install this software via a prebuilt virtual machine (fast), or manually (more control and more work). Details for VM and manual installation are provided at the bottom of this README [here](#alternative-installation-options).
 
-## Prebuilt Installation
+## Installing via Racecar Docker
+Navigate to [this repository](https://github.com/mit-racecar/racecar_docker) for instructions on how to install the racecar docker image. We highly recommend you use Docker as it will isolate the system from your native operating system and make it much easier for you and the TAs to debug if things go wrong. 
+
+
+### Testing the Racecar Simulator
+
+Run ```rviz``` and the racecar simulator as instructed in the Racecar Docker repo. Note: you should see an `Error: Couldn't open joystick /dev/input/js0`. You can safely ignore this for now (it is a relic of connecting to the physical system).
+
+Now in the ```rviz``` window, in the left panel at the bottom click the "Add" button, then in the "By topic" tab add the ```/map``` topic and the ```/scan``` topic.
+Then in the "By display type" tab add the RobotModel type.
+In the left panel under the newly added LaserScan section, change the size to 0.1 meters for a clearer visualization of the lidar (shown in rainbow).
+
+You should see the car sitting in the middle of a 2D map of MIT's building 31 as shown below:
+
+![The racecar in a cubicle](https://raw.githubusercontent.com/mit-rss/base_installation/master/media/racecar_simulator_rviz.png)
+
+You can move the car around by clicking the "2D Pose Estimate button" on the top of the screen and dragging your mouse on the desired pose.
+
+![The racecar in a cubicle](https://raw.githubusercontent.com/mit-racecar/racecar_simulator/master/media/racecar_simulator_rviz_2.png)
+
+You've now completed the base installation! Please move on to Lab 1A-B: [Intro to Linux](https://github.com/mit-rss/intro_to_linux) and [Intro to Git](https://github.com/mit-rss/intro_to_git).
+
+# Alternative Installation Options
+
+## Prebuilt Installation via Virtual Machine
 
 The latest racecar virtual machine image is [here on Dropbox](https://www.dropbox.com/s/kxx19i90r1svsve/racecar.ova?dl=0). If you have issues downloading with Chrome, try a different browser such as Firefox.
 
@@ -29,7 +53,7 @@ On MacOS Catalina, you might encounter mouse issues. This seems to be related to
 
 On a manual installation, you may not be able to copy and paste from your host to the VM and the VM may have low resolution until you restart the VM.
 
-## Manual Installation (skip if you use the prebuilt image)
+## Manual Installation 
 
 ### Operating System
 
@@ -118,8 +142,7 @@ Then run ```catkin_make``` in the root of your catkin workspace to build it.
     cd ~/racecar_ws
     catkin_make
     source devel/setup.bash
-
-## Testing the Racecar Simulator
+### Testing the Racecar Simulator
 
 Start a ```roscore``` which acts as the communication center for all ROS services. Just run this in a terminal:
 
