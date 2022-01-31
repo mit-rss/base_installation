@@ -13,20 +13,7 @@ We recommend following the instructions for installing this software using the D
 ## Installing via Racecar Docker
 Navigate to [this repository](https://github.com/mit-racecar/racecar_docker) for instructions on how to install the racecar docker image. We highly recommend you use Docker as it will isolate the system from your native operating system and make it much easier for you and the TAs to debug if things go wrong. 
 
-
-### Testing the Racecar Simulator
-
-Run ```rviz``` and the racecar simulator as instructed in the Racecar Docker repo. Note: you should see an `Error: Couldn't open joystick /dev/input/js0`. You can safely ignore this for now (it is a relic of connecting to the physical system).
-
-Now in the ```rviz``` window, in the left panel at the bottom click the "Add" button, then in the "By topic" tab add the ```/map``` topic and the ```/scan``` topic.
-Then in the "By display type" tab add the RobotModel type.
-In the left panel under the newly added LaserScan section, change the size to 0.1 meters for a clearer visualization of the lidar (shown in rainbow).
-
-You should see the car sitting in the middle of a 2D map of MIT's building 31 as shown below:
-
-![The racecar in a cubicle](https://raw.githubusercontent.com/mit-rss/base_installation/master/media/racecar_simulator_rviz.png)
-
-You can move the car around by clicking the "2D Pose Estimate button" on the top of the screen and dragging your mouse on the desired pose.
+Make sure to read the instructions up until the section on connecting to the physical racecar --- we'll get to that in a couple weeks! Also make sure you can get through the "Example Usage" section and run the simulator and RViz. It should look something like this:
 
 ![The racecar in a cubicle](https://raw.githubusercontent.com/mit-racecar/racecar_simulator/master/media/racecar_simulator_rviz_2.png)
 
