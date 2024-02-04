@@ -8,8 +8,6 @@ This includes:
 - ROS, a very popular robotics toolkit
 - The Racecar simulator
 
-We recommend following the instructions for installing this software using the Docker image as detailed below (fast and reliable), though you may also install this software via a prebuilt virtual machine (fast), or manually (more control and more work). Details for VM and manual installation are provided at the bottom of this README [here](#alternative-installation-options).
-
 ## Installing via Racecar Docker
 Navigate to [this repository](https://github.com/mit-racecar/racecar_docker) for instructions on how to install the racecar docker image. We highly recommend you use Docker as it will isolate the system from your native operating system and make it much easier for you and the TAs to debug if things go wrong. 
 
